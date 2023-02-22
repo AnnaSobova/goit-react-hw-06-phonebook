@@ -41,18 +41,17 @@ const Phonebook =()=> {
      
       const formSubmitHandle = data =>{
         const id = nanoid();
-        if (contacts.filter(contacts => contacts.name === data.name).length > 0){
+        if (contacts.filter(contact => contact.name === data.name).length > 0){
           alert (`${data.name}  already in contacts `);
           return;
         }  
         data.id = id;
-        dispatch (addContact(data));
+        dispatch(addContact(data));
       };
       
-      
 
-        return(
-            <>
+        return (
+      
             <FormPhonebook onSubmit={clickOnBtnSubmit}>
                 <LabelPhoneBook title="Name">     
             <InputName value={name} onChange={handleChange}/>
@@ -62,7 +61,7 @@ const Phonebook =()=> {
             </LabelPhoneBook>
            <ButtonSubmit text="Add contact"/>
             </FormPhonebook>
-            </>
+            
         );
        }
     
