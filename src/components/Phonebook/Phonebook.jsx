@@ -1,6 +1,6 @@
 import {useState }from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { addContact } from 'redux/contactSlise';
+import { addContact } from 'redux/contactSlise1';
 import { nanoid } from 'nanoid/non-secure'
 import FormPhonebook from './Form/Form';
 import InputName from './Input/InputName';
