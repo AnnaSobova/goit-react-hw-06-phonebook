@@ -13,4 +13,4 @@ ButtonDelete.propTypes = {
     onClickDelete: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
   };
-  export default ButtonDelete
+  export default ButtonDelete 

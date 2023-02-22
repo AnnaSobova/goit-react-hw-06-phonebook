@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import storage from 'redux-persist/lib/storage'
-import {contactSlice} from './contactSlise1';
+import {contactSlice} from './contactSlise';
 import {
   persistStore,
   persistReducer,

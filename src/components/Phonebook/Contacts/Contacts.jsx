@@ -5,7 +5,7 @@ import LabelFilter from '../Label/LabelFilter/LabelFilter';
 import ButtonDelete from '../Button/ButtonDelete/ButtonDelete';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector  } from 'react-redux';
-import {deleteContact} from 'redux/contactSlise1';
+import {deleteContact} from 'redux/contactSlise';
 
 const Contacts =({name})=>{
   const dispatch = useDispatch();
