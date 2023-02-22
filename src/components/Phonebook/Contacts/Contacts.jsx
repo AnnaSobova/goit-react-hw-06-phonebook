@@ -35,9 +35,8 @@ return(
       ))}
     </ul>
 </ContactsItem>
-);
+  );
 };
-
 
 export default Contacts;
 

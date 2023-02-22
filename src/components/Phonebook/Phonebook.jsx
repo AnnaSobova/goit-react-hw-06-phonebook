@@ -14,7 +14,7 @@ const Phonebook =()=> {
        const dispatch = useDispatch();
        const contacts = useSelector(state => state.contacts.item);
       
-         const handleChange = e =>{
+      const handleChange = e =>{
         
          switch (e.currentTarget.name){
          case 'name':
@@ -32,21 +32,20 @@ const Phonebook =()=> {
         setName('');
         setNumber('');
        };
-
      
-     
-      const formSubmitHandle = data => {
+       const formSubmitHandle = data => {
         const id = nanoid();
-        if (contacts.filter(contact => contact.name === data.name).length > 0){
-          alert (`${data.name}  already in contacts `);
+        if (contacts.filter(contact => contact.name === data.name).length > 0) {
+          alert(`${data.name} is already in contacts`);
           return;
-        }  
+        }
         data.id = id;
+        
         dispatch(addContact(data));
       };
-      
+     
 
-       const clickOnBtnSubmit=event=>{
+       const clickOnBtnSubmit = event => {
         event.preventDefault();
         formSubmitHandle({name,number});
         reset();
