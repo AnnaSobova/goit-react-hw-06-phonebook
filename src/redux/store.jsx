@@ -12,14 +12,14 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-const persisstConfig = {
+const persistConfig = {
   key: 'root',
   storage: storage,
   whitelist:['items'],
 }
 
 const contactsPersistedReducer = persistReducer(
-  persisstConfig,
+  persistConfig,
   contactSlice.reducer
 );
 

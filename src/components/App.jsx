@@ -10,7 +10,6 @@ const App = ()=> {
 
 return(
   <Container title="Phonebook">
-     
      <Phonebook />
           {contacts.length > 0 ? (
           <Contacts
@@ -19,8 +18,8 @@ return(
           <p>Phonebook empty</p>
         )}
   </Container>
-  )
+  );
  
-}
+};
 
 export default App;

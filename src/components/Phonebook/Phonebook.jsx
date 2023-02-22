@@ -33,13 +33,9 @@ const Phonebook =()=> {
         setNumber('');
        };
 
-     const clickOnBtnSubmit=event=>{
-        event.preventDefault();
-        formSubmitHandle({name,number});
-        reset();
-      };
      
-      const formSubmitHandle = data =>{
+     
+      const formSubmitHandle = data => {
         const id = nanoid();
         if (contacts.filter(contact => contact.name === data.name).length > 0){
           alert (`${data.name}  already in contacts `);
@@ -49,6 +45,12 @@ const Phonebook =()=> {
         dispatch(addContact(data));
       };
       
+
+       const clickOnBtnSubmit=event=>{
+        event.preventDefault();
+        formSubmitHandle({name,number});
+        reset();
+      };
 
         return (
       
@@ -61,7 +63,6 @@ const Phonebook =()=> {
             </LabelPhoneBook>
            <ButtonSubmit text="Add contact"/>
             </FormPhonebook>
-            
         );
        }
     
